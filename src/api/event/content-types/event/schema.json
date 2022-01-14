@@ -37,12 +37,6 @@
     "description": {
       "type": "richtext"
     },
-    "user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "events"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -52,6 +46,12 @@
         "files",
         "videos"
       ]
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "events"
     }
   }
 }
