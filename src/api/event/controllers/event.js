@@ -13,16 +13,24 @@ module.exports = createCoreController("api::event.event", ({ strapi }) => ({
 
   // Create event with linked user
   async create(ctx) {
+
     let entity;
+    const { user } = ctx.state;
+
+    if(!user) {
+      return ctx.badRequest(null, [{messages: [{ id: "No authorization header was found" }]}]);
+    }
+
     if (ctx.is('multipart')) {
       const { data, files } = parseMultipartData(ctx);
       data.user = ctx.state.user.id;
-      entity = await strapi.services.events.create(data, { files });
+      entity = await super.create(ctx);
     } else {
-      ctx.request.body.user = ctx.state.user.id;
-      entity = await strapi.services.events.create(ctx.request.body);
+      ctx.request.body.data.users = user.id;
+      entity = await super.create(ctx);
     }
-    return sanitizeEntity(entity, { model: strapi.models.article });
+
+    return entity;
   },
 
   // Update user event
