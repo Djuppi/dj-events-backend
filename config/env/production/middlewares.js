@@ -1,19 +1,19 @@
 module.exports = {
+    load: {
+      before: ["timer", "responseTime", "logger", "cors", "responses", "gzip"],
+      order: [],
+      after: ["parser", "router"],
+    },
     settings: {
+      timer: {
+        enabled: true,
+      },
       cors: {
-        enabled: false,
-        origin: '*',
-        expose: ['WWW-Authenticate', 'Server-Authorization', 'Access-Control-Expose-Headers'],
-        maxAge: 31536000,
-        credentials: true,
-        methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS', 'HEAD'],
-        headers: [
-          'Content-Type',
-          'Authorization',
-          'X-Frame-Options',
-          'Origin',
-          'Access-Control-Allow-Headers',
-          'access-control-allow-origin',
+        enabled: true,
+        headers: '*',
+        origin: [
+          "https://www.localhost:3000",
+          "http://www.djuppidjevntsbackend.herokuapp.com",
         ],
       },
     },
