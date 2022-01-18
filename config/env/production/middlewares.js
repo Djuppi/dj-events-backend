@@ -13,7 +13,6 @@ module.exports = {
         headers: '*',
         origin: [
           "https://www.localhost:3000",
-          "http://www.djuppidjevntsbackend.herokuapp.com",
         ],
       },
     },
