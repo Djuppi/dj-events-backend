@@ -3,7 +3,7 @@ module.exports = {
     cors: {
       enabled: true, 
       // headers: '*', 
-      origin: ["http://localhost:1337"],
+      origin: ["http://localhost:1337", "https://djuppidjevntsbackend.herokuapp.com"],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS']
     },
   },
