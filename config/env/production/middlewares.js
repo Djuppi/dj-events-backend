@@ -17,7 +17,7 @@ module.exports = [
   {
     name: 'strapi::cors',
       config: {
-        headers: '*',
+        headers: ['Access-Control-Allow-Origin'],
         origin: [
           "https://djuppidjevntsbackend.herokuapp.com/",
           "https://www.localhost:3000",
