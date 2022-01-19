@@ -10,11 +10,11 @@ module.exports = {
       },
       cors: {
         enabled: true,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
+        headers: ['*'],
         origin: [
+          "https://djuppidjevntsbackend.herokuapp.com/",
           "https://www.localhost:3000",
+          "https://localhost:1337"
         ],
       },
     },
