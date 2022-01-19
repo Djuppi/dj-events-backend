@@ -16,18 +16,7 @@ module.exports = [
       },
     },
   },
-  {
-    name: 'strapi::cors',
-      config: {
-        headers: '*',
-        origin: [
-          "https://djuppidjevntsbackend.herokuapp.com/",
-          "https://www.localhost:3000",
-          "https://localhost:1337"
-        ],
-        methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS']
-      }
-  },
+  'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
