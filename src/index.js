@@ -1,5 +1,7 @@
 'use strict';
 
+const cors = require('cors');
+
 module.exports = {
   /**
    * An asynchronous register function that runs before
@@ -7,7 +9,9 @@ module.exports = {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/*{ strapi }*/) {},
+  register({ strapi }) {
+    strapi.server.use(cors());
+  },
 
   /**
    * An asynchronous bootstrap function that runs before

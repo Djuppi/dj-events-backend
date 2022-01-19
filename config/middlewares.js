@@ -23,20 +23,4 @@ module.exports = [
   'strapi::body',
   'strapi::favicon',
   'strapi::public',
-  {
-    settings: {
-      timer: {
-        enabled: true,
-      },
-      cors: {
-        enabled: true,
-        headers: ['*'],
-        origin: [
-          "https://djuppidjevntsbackend.herokuapp.com/",
-          "https://www.localhost:3000",
-          "https://localhost:1337"
-        ],
-      },
-    },
-  }
 ];

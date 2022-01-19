@@ -14,6 +14,7 @@
     "@strapi/plugin-users-permissions": "4.0.4",
     "@strapi/provider-upload-cloudinary": "^4.0.3",
     "@strapi/strapi": "4.0.4",
+    "cors": "^2.8.5",
     "pg": "^8.7.1",
     "pg-connection-string": "^2.5.0",
     "slugify": "^1.6.5",
