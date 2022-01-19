@@ -9,8 +9,7 @@ module.exports = {
    *
    * This gives you an opportunity to extend code.
    */
-  register({ strapi }) {
-    strapi.server.use(cors());
+  register(/*{ strapi }*/) {
   },
 
   /**
