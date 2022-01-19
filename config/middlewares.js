@@ -21,7 +21,7 @@ module.exports = [
       config: {
         headers: '*',
         origin: [
-          "https://djuppidjevntsbackend.herokuapp.com/",
+          "https://djuppidjevntsbackend.herokuapp.com/*",
           "https://www.localhost:3000",
           "https://localhost:1337"
         ],

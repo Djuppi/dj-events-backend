@@ -19,7 +19,7 @@ module.exports = [
       config: {
         headers: ['Access-Control-Allow-Origin'],
         origin: [
-          "https://djuppidjevntsbackend.herokuapp.com/",
+          "https://djuppidjevntsbackend.herokuapp.com/*",
           "https://www.localhost:3000",
           "https://localhost:1337"
         ],
