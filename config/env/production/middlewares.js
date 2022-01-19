@@ -3,7 +3,8 @@ module.exports = {
     cors: {
       enabled: true, 
       // headers: '*', 
-      origin: ["http://localhost"],
+      origin: ["http://localhost:1337"],
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS']
     },
   },
 }
