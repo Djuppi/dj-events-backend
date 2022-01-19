@@ -9,7 +9,7 @@ module.exports = {
         enabled: true,
       },
       cors: {
-        enabled: true,
+        enabled: false,
         headers: ['*'],
         origin: [
           "https://djuppidjevntsbackend.herokuapp.com/",
