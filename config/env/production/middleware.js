@@ -9,8 +9,8 @@ module.exports = {
         enabled: true,
       },
       cors: {
-        enabled: false,
-        headers: ['*'],
+        enabled: true,
+        headers: '*',
         origin: [
           "https://djuppidjevntsbackend.herokuapp.com/",
           "https://www.localhost:3000",
