@@ -15,15 +15,7 @@ module.exports = [
         },
       },
     },
-    settings: {
-      cors: {
-        enabled: true,
-        headers: '*',
-        origin: ['https://djuppidjevntsbackend.herokuapp.com', 'https://localhost:3000', 'https://localhost:1337']
-      },
-    },
   },
-  'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
