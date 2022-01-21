@@ -83,8 +83,8 @@ module.exports = createCoreController("api::event.event", ({ strapi }) => ({
     }
 
     const data = await strapi.plugins['users-permissions'].services.user.fetchAuthenticatedUser(user.id);
-
-    if(!data.events) {
+    
+    if(!data) {
       ctx.notFound();
     }
 
