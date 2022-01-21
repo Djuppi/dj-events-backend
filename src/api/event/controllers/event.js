@@ -48,7 +48,6 @@ module.exports = createCoreController("api::event.event", ({ strapi }) => ({
     if (ctx.is('multipart')) {
       entity = await super.update(ctx);
     } else {
-      console.log(ctx.request.body)
       entity = await super.update(ctx);
     }
 
@@ -82,8 +81,11 @@ module.exports = createCoreController("api::event.event", ({ strapi }) => ({
       return ctx.badRequest(null, [{messages: [{ id: "No authorization header was found" }]}]);
     }
 
-    const data = await strapi.plugins['users-permissions'].services.user.fetchAuthenticatedUser(user.id);
-    
+    const { id } = user;
+
+    const data = await strapi
+      .query('plugin::users-permissions.user')
+      .findOne({ where: { id }, populate: ['role', 'events'] });
     if(!data) {
       ctx.notFound();
     }
